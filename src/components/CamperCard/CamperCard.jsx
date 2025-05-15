@@ -50,7 +50,7 @@ const CamperCard = ({ camper }) => {
             </span>
             <button className="favorite-btn" onClick={handleFavorite}>
               <img
-                src={isFavorite ? "/kalp=Default.svg" : "/kalp=pressed.svg"}
+                src={isFavorite ? "/kalp=pressed.svg" : "/kalp=Default.svg"}
                 alt="favorite"
                 className="kalp-icon"
               />
