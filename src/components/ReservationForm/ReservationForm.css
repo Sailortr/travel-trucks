@@ -9,7 +9,7 @@
 .reservation-card {
   height: 50vh;
   width: 120vh;
-  max-width: auto;
+  max-width: 500px;
   background-color: #fff;
   padding: 2rem;
   border: 1px solid #eee;
