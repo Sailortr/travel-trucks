@@ -77,7 +77,11 @@
 .details-and-form {
   display: flex;
   gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .details-and-form > * {
