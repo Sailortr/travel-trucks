@@ -1,0 +1,65 @@
+.camper-details {
+  height: 50vh;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.features-box {
+  background-color: rgba(247, 247, 247, 1);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.features-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(242, 244, 247, 1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #1f2b3a;
+  font-weight: 500;
+}
+
+.feature-icon {
+  width: auto;
+  height: auto;
+  background-color: rgba(242, 244, 247, 1);
+}
+
+.vehicle-details h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #1f2b3a;
+}
+
+.vehicle-details hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.vehicle-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.vehicle-details li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  color: #333;
+}

@@ -1,0 +1,133 @@
+.filter-panel {
+  width: 360px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: auto;
+}
+
+.location-filter label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.location-filter input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+.filter-group h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.75rem;
+  margin-top: 1.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.equipment-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.equipment-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 0;
+  text-align: center;
+}
+
+.equipment-icon-wrapper:hover {
+  border-color: #d94141;
+}
+
+.equipment-icon-wrapper.active {
+  border: 2px solid #d94141;
+  background-color: #fff4f4;
+  color: #d94141;
+  font-weight: 600;
+}
+
+.equipment-icon {
+  width: auto;
+  height: auto;
+}
+
+.type-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.type-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 0;
+  text-align: center;
+}
+
+.type-icon-wrapper:hover {
+  border-color: #d94141;
+}
+
+.type-icon-wrapper.active {
+  border: 2px solid #d94141;
+  background-color: #fff4f4;
+  color: #d94141;
+  font-weight: 600;
+}
+
+.type-icon {
+  width: auto;
+  height: auto;
+}
+
+.search-btn {
+  padding: 1.5rem 3rem;
+  margin-top: 1.5rem;
+  border: none;
+  background-color: #d94141;
+  color: white;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #bb2f2f;
+}
