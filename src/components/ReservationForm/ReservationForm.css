@@ -8,8 +8,8 @@
 
 .reservation-card {
   height: 50vh;
-  width: 100vh;
-  max-width: 500px;
+  width: 120vh;
+  max-width: auto;
   background-color: #fff;
   padding: 2rem;
   border: 1px solid #eee;
