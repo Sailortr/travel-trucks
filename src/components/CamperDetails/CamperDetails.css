@@ -63,3 +63,12 @@
   padding: 0.4rem 0;
   color: #333;
 }
+
+.features-box,
+.reservation-wrapper {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
