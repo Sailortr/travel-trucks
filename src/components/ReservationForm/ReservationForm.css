@@ -1,11 +1,11 @@
 .reservation-wrapper {
-  height: 50vh;
-  width: 150vh;
   padding: 2rem;
   display: flex;
   justify-content: center;
-  width: 100%;
   background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
 }
 
 .reservation-card {

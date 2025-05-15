@@ -6,13 +6,12 @@
 }
 
 .features-box {
-  height: 50vh;
-  width: 150vh;
   background-color: rgba(247, 247, 247, 1);
   border-radius: 12px;
   padding: 2rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
+  box-sizing: border-box;
 }
 
 .features-row {
