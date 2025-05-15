@@ -1,13 +1,13 @@
 .camper-details {
   flex: 1 1 480px;
-  height: 50vh;
-  width: 150vh;
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
 
 .features-box {
+  height: 50vh;
+  width: 150vh;
   background-color: rgba(247, 247, 247, 1);
   border-radius: 12px;
   padding: 2rem;

@@ -1,4 +1,6 @@
 .reservation-wrapper {
+  height: 50vh;
+  width: 150vh;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -7,8 +9,6 @@
 }
 
 .reservation-card {
-  height: 50vh;
-  width: 150vh;
   max-width: 500px;
   max-height: 700px;
   background-color: #fff;
