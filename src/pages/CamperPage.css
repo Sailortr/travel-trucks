@@ -30,14 +30,18 @@
 .gallery {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .gallery img {
-  height: 200px;
-  border-radius: 12px;
+  width: 250px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .description {
@@ -85,4 +89,11 @@
 
 .details-and-form > * {
   flex: 1 1 480px;
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
 }
