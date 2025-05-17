@@ -55,3 +55,12 @@
 .load-more:hover {
   border: 2px solid red;
 }
+
+.no-results-message {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+  margin-top: 2rem;
+}

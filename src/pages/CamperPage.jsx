@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getCamperById } from "../api/campersAPI";
+import { useDispatch, useSelector } from "react-redux";
+
 import CamperDetails from "../components/CamperDetails/CamperDetails";
 import ReviewList from "../components/ReviewList/ReviewList";
 import ReservationForm from "../components/ReservationForm/ReservationForm";
+import { getCamperById } from "../redux/campersSlice";
 import "./CamperPage.css";
 
 const CamperPage = () => {
   const { id } = useParams();
-  const [camper, setCamper] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState("features");
+  const dispatch = useDispatch();
+  const camper = useSelector((state) => state.campers.camperDetails[id]);
+  const [activeTab, setActiveTab] = React.useState("features");
 
   useEffect(() => {
-    getCamperById(id).then((data) => {
-      setCamper(data);
-      setLoading(false);
-    });
-  }, [id]);
+    if (!camper) {
+      dispatch(getCamperById(id));
+    }
+  }, [dispatch, id, camper]);
 
-  if (loading) return <p>Loading...</p>;
-  if (!camper) return <p>Not found</p>;
+  if (!camper) return <p>Loading camper...</p>;
 
   return (
     <div className="camper-page">
@@ -59,19 +59,13 @@ const CamperPage = () => {
         </button>
       </div>
 
-      <div className="tab-section">
-        {activeTab === "features" && (
-          <div className="details-and-form">
-            <CamperDetails camper={camper} />
-            <ReservationForm />
-          </div>
-        )}
-        {activeTab === "reviews" && (
-          <div className="details-and-form" id="reviews">
-            <ReviewList reviews={camper.reviews} />
-            <ReservationForm />
-          </div>
-        )}
+      <div
+        className="details-and-form"
+        id={activeTab === "reviews" ? "reviews" : undefined}
+      >
+        {activeTab === "features" && <CamperDetails camper={camper} />}
+        {activeTab === "reviews" && <ReviewList reviews={camper.reviews} />}
+        <ReservationForm />
       </div>
     </div>
   );

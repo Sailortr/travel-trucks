@@ -15,8 +15,8 @@ const Catalog = () => {
   const [filters, setFilters] = useState(null);
 
   useEffect(() => {
-    dispatch(fetchCampers());
-  }, [dispatch]);
+    dispatch(fetchCampers(filters || {}));
+  }, [dispatch, filters]);
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + ITEMS_PER_PAGE);
@@ -36,7 +36,11 @@ const Catalog = () => {
               .includes(filters.location.toLowerCase())) &&
           (!filters?.type || camper.form === filters.type) &&
           (!filters?.features ||
-            filters.features.every((f) => camper[f] === true))
+            filters.features.every((f) =>
+              f === "transmission"
+                ? camper.transmission === "automatic"
+                : camper[f] === true
+            ))
         );
       })
     : [];
@@ -50,10 +54,18 @@ const Catalog = () => {
         <div className="camper-list">
           {status === "loading" && <LoadingSpinner />}
           {status === "failed" && <p>Error: {error}</p>}
+
+          {status === "succeeded" && filteredCampers.length === 0 && (
+            <p className="no-results-message">
+              No campers found matching the selected filters.
+            </p>
+          )}
+
           {status === "succeeded" &&
             visibleCampers.map((camper) => (
               <CamperCard key={camper.id} camper={camper} />
             ))}
+
           {status === "succeeded" && visibleCount < filteredCampers.length && (
             <button onClick={handleLoadMore} className="load-more">
               Load More

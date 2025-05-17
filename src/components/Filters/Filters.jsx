@@ -43,7 +43,7 @@ const Filters = ({ onSearch }) => {
             { key: "kitchen", icon: "/Kitchen.svg" },
             { key: "TV", icon: "/TV.svg" },
             { key: "bathroom", icon: "/Bathroom.svg" },
-          ].map(({ key, label, icon }) => (
+          ].map(({ key, icon }) => (
             <button
               key={key}
               onClick={() => toggleFeature(key)}
@@ -51,8 +51,7 @@ const Filters = ({ onSearch }) => {
                 features.includes(key) ? "active" : ""
               }`}
             >
-              <img src={icon} alt={label} className="equipment-icon" />
-              <span>{label}</span>
+              <img src={icon} className="equipment-icon" />
             </button>
           ))}
         </div>
@@ -62,10 +61,10 @@ const Filters = ({ onSearch }) => {
         <h4>Vehicle type</h4>
         <div className="type-buttons">
           {[
-            { key: "van", icon: "/Van.svg" },
-            { key: "fully", icon: "/Fully.svg" },
+            { key: "panelTruck", icon: "/Van.svg" },
+            { key: "fullyIntegrated", icon: "/Fully.svg" },
             { key: "alcove", icon: "/Alcove.svg" },
-          ].map(({ key, label, icon }) => (
+          ].map(({ key, icon }) => (
             <button
               key={key}
               onClick={() => setVehicleType(key)}
@@ -73,8 +72,7 @@ const Filters = ({ onSearch }) => {
                 vehicleType === key ? "active" : ""
               }`}
             >
-              <img src={icon} alt={label} className="type-icon" />
-              <span>{label}</span>
+              <img src={icon} className="type-icon" />
             </button>
           ))}
         </div>
